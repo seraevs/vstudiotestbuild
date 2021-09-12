@@ -14,7 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 - task: VSBuild@1
   inputs:
-    solution: '**\*.sln'
+    solution: 'TestProgramer.sln'
     msbuildArgs: 'vstudiotestbuild'
     platform: 'vstudiotestbuild'
 - script: |
