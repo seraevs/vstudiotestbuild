@@ -12,7 +12,11 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
+- task: VSBuild@1
+  inputs:
+    solution: '**\*.sln'
+    msbuildArgs: 'vstudiotestbuild'
+    platform: 'vstudiotestbuild'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
